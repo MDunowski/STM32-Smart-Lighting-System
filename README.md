@@ -41,20 +41,3 @@ Instead of smooth dimming, this system implements discrete step logic to simulat
 
 ### Clamping & Input Safety
 Robust checking is implemented to prevent the PWM duty cycle from exceeding Timer limits (0%–100%). Any raw ADC value outside of the calibrated range is safely clamped to the minimum or maximum allowed value.
-
-## 🔌 Hardware Setup
-
-The system uses a simple voltage divider circuit with a photoresistor (LDR) and a 10kΩ resistor. An external LED (with a 330Ω current-limiting resistor) is connected to pin **PA1**.
-
-| Component | STM32 Pin | Note |
-| :--- | :--- | :--- |
-| **LDR (Photoresistor)** | **PC0 (ADC1_IN10)** | Voltage Divider circuit |
-| **LED** | **PA1 (TIM2_CH2)** | PWM Output |
-
-## 🏗 Key Engineering Concepts
-
-### Discrete Step Quantization
-Instead of smooth dimming, this system implements discrete step logic to simulate a "gearbox" effect for the LED brightness. This makes changes more pronounced and easier to observe, while maintaining efficient control.
-
-### Clamping & Input Safety
-Robust checking is implemented to prevent the PWM duty cycle from exceeding Timer limits (0%–100%). Any raw ADC value outside of the calibrated range is safely clamped to the minimum or maximum allowed value.

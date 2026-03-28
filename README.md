@@ -20,7 +20,6 @@ An embedded C system designed for the **STM32F411RE (Nucleo-64)** platform. It a
 ### 2. Live Telemetry from Serial Terminal (Tera Term)
 This screenshot from Tera Term shows the underlying system logs. For every conversion cycle, the firmware transmits:
 * **`ADC:`** Raw 12-bit value (0–4095).
-* **`Jasnosc:`** Calculated duty cycle percentage (from 10% to 100%) which is then mapped to PWM output.
 
 ![Tera Term Logs](TeraTermSS.png)
 
@@ -32,11 +31,3 @@ The system uses a simple voltage divider circuit with a photoresistor (LDR) and 
 | :--- | :--- | :--- |
 | **LDR (Photoresistor)** | **PC0 (ADC1_IN10)** | Voltage Divider circuit |
 | **LED** | **PA1 (TIM2_CH2)** | PWM Output |
-
-## 🏗 Key Engineering Concepts
-
-### Discrete Step Quantization
-Instead of smooth dimming, this system implements discrete step logic to simulate a "gearbox" effect for the LED brightness. This makes changes more pronounced and easier to observe, while maintaining efficient control.
-
-### Clamping & Input Safety
-Robust checking is implemented to prevent the PWM duty cycle from exceeding Timer limits (0%–100%). Any raw ADC value outside of the calibrated range is safely clamped to the minimum or maximum allowed value.

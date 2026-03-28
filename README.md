@@ -16,7 +16,7 @@ An embedded C system designed for the **STM32F411RE (Nucleo-64)** platform. It a
 ### 1. LED Dimming in Action (GIF)
 Here you can see the autonomous control in real-time. The system calculates discrete brightness levels (from 10% to 100%) by mapping the inverted photoresistor value. The transitions happen in precise, calibrated steps.
 
-`![LED Control Demo](documentation/led_demo.gif)`
+![LED Control Demo](led_demo.gif)
 
 ### 2. Live Telemetry from Serial Terminal (Tera Term)
 This screenshot from Tera Term shows the underlying system logs. For every conversion cycle, the firmware transmits:

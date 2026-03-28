@@ -23,7 +23,7 @@ This screenshot from Tera Term shows the underlying system logs. For every conve
 * **`ADC:`** Raw 12-bit value (0–4095).
 * **`Jasnosc:`** Calculated duty cycle percentage (from 10% to 100%) which is then mapped to PWM output.
 
-`![Tera Term Logs](documentation/teraterm_logs.png)`
+![Tera Term Logs](teratermSS.png)
 
 ## 🔌 Hardware Setup
 

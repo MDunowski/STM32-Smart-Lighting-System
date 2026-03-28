@@ -14,7 +14,6 @@ An embedded C system designed for the **STM32F411RE (Nucleo-64)** platform. It a
 ## 🚀 Demonstration: How it works
 
 ### 1. LED Dimming in Action (GIF)
-Here you can see the autonomous control in real-time. The system calculates discrete brightness levels (from 10% to 100%) by mapping the inverted photoresistor value. The transitions happen in precise, calibrated steps.
 
 ![LED Control Demo](led_demo.gif)
 
@@ -23,7 +22,7 @@ This screenshot from Tera Term shows the underlying system logs. For every conve
 * **`ADC:`** Raw 12-bit value (0–4095).
 * **`Jasnosc:`** Calculated duty cycle percentage (from 10% to 100%) which is then mapped to PWM output.
 
-![Tera Term Logs](teratermSS.png)
+![Tera Term Logs](TeraTermSS.png)
 
 ## 🔌 Hardware Setup
 
